@@ -15,7 +15,7 @@ export const Home = () => {
   const [searchValue, setSearchValue] = useState('');
 
   const handleLoadPosts = useCallback(async (page, postsPerPage) => {
-    const postsAndPhotos = await loadPosts();
+  const postsAndPhotos = await loadPosts();
 
     setPosts(postsAndPhotos.slice(page, postsPerPage));
     setAllPosts(postsAndPhotos);
@@ -41,6 +41,7 @@ export const Home = () => {
   };
 
   const noMorePosts = page + postsPerPage >= allPosts.length;
+
   const filteredPosts = searchValue
     ? allPosts.filter((post) => {
         return post.title.toLowerCase().includes(searchValue.toLowerCase());
