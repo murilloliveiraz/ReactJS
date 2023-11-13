@@ -1,7 +1,7 @@
-import { call, put, all, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
-import * as actions from './actions';
+import { all, call, put, takeLatest } from 'redux-saga/effects';
 import * as types from '../types';
+import * as actions from './actions';
 
 const requisicao = () =>
   new Promise((resolve) => {
